@@ -1,147 +1,124 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>EXILE</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exile - Serveur Privé Fortnite</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body, html {
-      min-height: 100vh;
-      font-family: 'Poppins', sans-serif;
-      background: url('https://cdn2.unrealengine.com/fortnite-chapter-3-season-1-battle-pass-1900x600-2bd9f56f38e5.jpg') no-repeat center center fixed;
-      background-size: cover;
-      color: #00f2ff;
-    }
-    main {
-      max-width: 650px;
-      padding: 80px 20px 40px;
-      margin: 0 auto;
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url('https://cdn2.unrealengine.com/Fortnite%2Fblog%2Flock-in-your-chapter-2-season-2-fortnite-agency-and-maya-choices%2F12BR_KeyArt_Social_BlogHeader-1920x1080-1eb9dac306de3d5c36182ddd79d6a114f8dccca8.jpg') center/cover no-repeat fixed;
+      color: white;
       text-align: center;
     }
-    h1 {
-      font-weight: 900;
-      font-size: 5rem;
-      margin-bottom: 0.2em;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: #00f2ff;
-      text-shadow: 0 0 15px #00f2ffcc;
-    }
-    h2 {
-      font-weight: 600;
-      font-size: 2.2rem;
-      margin-bottom: 2em;
-      color: #a0f7ff;
-    }
-    p {
-      font-weight: 400;
-      font-size: 1.4rem;
-      margin-bottom: 3em;
-      color: #99f0ffcc;
-    }
-    .button {
-      display: inline-block;
-      padding: 15px 40px;
-      font-weight: 700;
-      font-size: 1.2rem;
-      color: #0f0f0f;
-      background-color: #00f2ff;
-      border-radius: 50px;
-      text-decoration: none;
-      box-shadow: 0 0 20px #00f2ffcc;
-      transition: background-color 0.3s ease, box-shadow 0.3s ease;
-      margin: 0 10px 20px 10px;
-    }
-    .button:hover {
-      background-color: #00c1cc;
-      box-shadow: 0 0 30px #00c1ccdd;
-    }
-    .image-scroll {
+
+    header {
+      background: rgba(0,0,0,0.6);
+      height: 200px;
       display: flex;
-      overflow-x: auto;
-      gap: 15px;
-      padding: 20px 20px 40px;
-      max-width: 90vw;
-      margin: 0 auto 40px auto;
-      scroll-behavior: smooth;
+      align-items: center;
+      justify-content: center;
     }
-    .image-scroll img {
-      flex: 0 0 auto;
-      width: 300px;
-      height: 170px;
-      object-fit: cover;
-      border-radius: 12px;
-      box-shadow: 0 0 20px #00f2ffcc;
+
+    header h1 {
+      font-size: 3rem;
+      text-transform: uppercase;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+      background: rgba(0,0,0,0.6);
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #ff3c3c;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 1.2rem;
+      margin: 10px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #ff5c5c;
+    }
+
+    .news {
+      background: #111;
+      padding: 15px;
+      margin-top: 20px;
+      border-radius: 8px;
+    }
+
+    /* Défilement d'images */
+    .carousel {
+      overflow-x: auto;
+      white-space: nowrap;
+      margin-top: 20px;
+      padding: 10px;
+      background: rgba(0,0,0,0.6);
+      border-radius: 8px;
+    }
+
+    .carousel img {
+      height: 150px;
+      margin: 5px;
+      border-radius: 8px;
+      display: inline-block;
       transition: transform 0.3s ease;
     }
-    .image-scroll img:hover {
-      transform: scale(1.05);
+
+    .carousel img:hover {
+      transform: scale(1.1);
     }
+
     footer {
-      max-width: 900px;
-      margin: 0 auto 40px;
-      display: flex;
-      justify-content: center;
-      gap: 50px;
-      padding: 20px 0;
-      font-size: 1rem;
-      color: #66d9ffcc;
-      border-top: 1px solid #00f2ff44;
-    }
-    footer div {
-      white-space: nowrap;
-    }
-    #google_translate_element {
-      position: fixed;
-      top: 15px;
-      right: 15px;
-      z-index: 1000;
-      filter: drop-shadow(0 0 3px #00f2ffcc);
-      background: rgba(0,0,0,0.25);
-      border-radius: 8px;
-      padding: 5px 10px;
+      margin-top: 40px;
+      padding: 10px;
+      background: rgba(0,0,0,0.8);
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
-  <div id="google_translate_element"></div>
+  <header>
+    <h1>Exile</h1>
+  </header>
 
-  <main>
-    <h1>EXILE</h1>
-    <h2>Plonge dans un monde où la survie n'a aucune limite</h2>
-    <p>Affronte tes adversaires, explore des environnements épiques, et deviens le dernier survivant dans EXILE.</p>
+  <div class="container">
+    <h2>Bienvenue sur le serveur privé Exile !</h2>
+    <p>Joue aux anciennes saisons Fortnite grâce à notre launcher Exile !</p>
 
-    <a href="#play" class="button">Jouer maintenant</a>
-    <a href="https://discord.gg/pyEUZ6P2xF" class="button" target="_blank" rel="noopener">Exile Discord</a>
-    <a href="https://gofile.io/d/3VHOua" class="button" target="_blank" rel="noopener">Télécharger le Launcher</a>
-    <a href="https://public.simplyblk.xyz/19.10.rar" class="button" target="_blank" rel="noopener">Build</a>
-  </main>
+    <a href="https://gofile.io/d/7v5vNh" class="btn" target="_blank">📥 Télécharger le Launcher</a>
+    <a href="https://public.simplyblk.xyz/Fortnite%2012.41.zip" class="btn" target="_blank">🛠️ Télécharger le Build</a>
+    <a href="https://www.radmin-vpn.com/" class="btn" target="_blank">🔗 Télécharger Radmin VPN</a>
+    <a href="https://discord.gg/pyEUZ6P2xF" class="btn" target="_blank">💬 Rejoindre le Discord</a>
 
-  <div class="image-scroll" aria-label="Défilement images Exile">
-    <img src="https://i.ytimg.com/vi/knAYcg7Tt8E/hq720.jpg" alt="Image 1 Exile" />
-    <img src="https://www.gamespot.com/a/uploads/original/1632/16320660/3914344-1%2835%29.jpg" alt="Image 2 Exile" />
-    <img src="https://cdn-0001.qstv.on.epicgames.com/gYNfUpWlkevFgvjNka/image/landscape_comp.jpeg" alt="Image 3 Exile" />
-    <img src="https://cdn.mos.cms.futurecdn.net/qi9gyoYEX9CaqFkQkcdimb.png" alt="Image 4 Exile" />
-    <img src="https://i.ytimg.com/vi/Ww9OhgXWW0Q/hq720.jpg" alt="Image 5 Exile" />
+    <div class="news">
+      <h3>Dernières mises à jour</h3>
+      <p>✅ 1. Nouveau Launcher stable</p>
+      <p>✅ 2. Nouvelle saison !</p>
+      <p>✅ 3. Nouveau site !</p>
+    </div>
+
+    <div class="carousel">
+      <img src="https://i.ytimg.com/vi/3SFAgKlnAGQ/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCXzwCRxwLOtWrKO4KEtKtqza6PGg" alt="Fortnite Image 1">
+      <img src="https://img.nrj.fr/aGfj9_9tiuYVqW6a_QHNL817658=/medias%2F2020%2F02%2Ffortnite-saison-2-chapitre-2_5e4e7a8b2619a.jpg" alt="Fortnite Image 2">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_tlXlbJxewkXbKWcmmbDsZU4s0Rmf9Tka4g&s" alt="Fortnite Image 3">
+      <img src="https://www.numerama.com/content/uploads/2020/02/kaboom-fortnite.jpg" alt="Fortnite Image 4">
+    </div>
   </div>
 
   <footer>
-    <div>Créateur de Exile : Pxreno</div>
-    <div>Développeur : Skylix</div>
-    <div>Fondateur du site : Swiiz</div>
+    © 2025 Exile - Projet non affilié à Epic Games
   </footer>
-
-  <script>
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({
-        pageLanguage: 'fr',
-        includedLanguages: 'en,es,de,it,ru,zh-CN,ja,ko,pt,ar,hi',
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-      }, 'google_translate_element');
-    }
-  </script>
-  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
